@@ -1,0 +1,231 @@
+{% Q1383489[49D]
+\needspace{8\baselineskip} 
+\item \rtask \ponto{\pt} 
+Assinale a opção abaixo que contém SOMENTE informações CORRETAS.
+
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+    \ti Python 3 possui retrocompatibilidade total com Python 2.
+    
+    \ti Python 3 não é compatível com cadeias de caracteres (\textit{strings}) Unicode.
+    
+    \ti \lstinline[style=Python]|count(d)| retorna o número de elementos do \lstinline[style=Python]|dict| \lstinline[style=Python]|d|.
+    
+    \di Dicionários em Python 3 preservam a ordem de inserção.
+    
+    \ti Utiliza-se \lstinline[style=Python]|array.add(x)| para adicionar \lstinline[style=Python]|x| a \textit{array}.
+\end{answerlist}
+}
+
+
+
+{% Q3258082
+
+\needspace{7\baselineskip}
+\item \rtask \ponto{\pt} %
+Julgue o próximo item.
+
+Em Python, listas de elementos podem ser preenchidas por qualquer tipo de objeto, porém a quantidade de objetos que terão essas listas só poderá ser alterada durante a criação delas.
+
+% F
+{\setlength{\columnsep}{0pt}\renewcommand{\columnseprule}{0pt}
+\begin{multicols}{2}
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+    \ti[V.]
+    \ifnum\gabarito=1\doneitem[F.]\else\ti[F.]\fi % gabarito
+\end{answerlist}
+\end{multicols}
+}
+
+    % Alternativa correta: E - Errado
+    %
+    % Vamos entender o que está sendo abordado na questão. O tema central é a utilização de listas em Python, uma estrutura de dados fundamental em qualquer linguagem de programação moderna, especialmente relevante para o Cargo de Analista Judiciário - Tecnologia da Informação.
+    %
+    % No Python, listas são estruturas de dados dinâmicas que podem conter elementos de qualquer tipo. Isso significa que, diferentemente de arrays em outras linguagens de programação que têm tamanho fixo, as listas em Python podem ser modificadas a qualquer momento, permitindo a adição ou remoção de elementos mesmo após a sua criação.
+    %
+    % Vamos ao resumo teórico:
+    %
+    % Em Python, uma lista é definida entre colchetes, como em minha_lista = [1, 2, 3]. As operações mais comuns que podem ser realizadas em listas incluem:
+    %
+    %     Adicionar elementos: Usando métodos como append() para adicionar um único elemento no final da lista ou extend() para adicionar múltiplos elementos.
+    %     Remover elementos: Utilizando remove() para remover um elemento específico ou pop() para remover pelo índice.
+    %     Alterar elementos: Atribuindo um novo valor a uma posição específica, por exemplo, minha_lista[0] = 10.
+    %
+    % Com base nisso, a afirmação de que "a quantidade de objetos que terão essas listas só poderá ser alterada durante a criação delas" está incorreta. As listas em Python são dinâmicas, permitindo modificações de tamanho a qualquer momento durante a execução do programa.
+    %
+    % Agora, analisando a alternativa:
+    %
+    %     Alternativa E - Errado: Esta é a alternativa correta, pois a afirmação da questão está incorreta quanto à flexibilidade na manipulação das listas em Python, que são dinâmicas e permitem adições e remoções de elementos a qualquer momento.
+    %
+    % Espero que agora você tenha entendido por que a resposta correta é a alternativa E. As operações dinâmicas de listas são essenciais para qualquer desenvolvedor Python, especialmente para alguém no cargo de Analista Judiciário em Tecnologia da Informação.
+}
+
+
+
+{ % Q3584924[F]
+\needspace{11\baselineskip}
+\item \rtask \ponto{\pt}
+Julgue o item subsequente, referente a Python.
+
+\begin{lstlisting}[style=Python]
+x = [10, 20, 30]
+y = x
+y += [60, 50, 40]
+print(x)
+print(y)
+\end{lstlisting}
+
+O código Python precedente, ao ser executado, apresentará o resultado a seguir.
+
+\begin{lstlisting}[style=Text]
+[10, 20, 30]
+[60, 60, 60]
+\end{lstlisting}
+
+
+% F
+{\setlength{\columnsep}{0pt}\renewcommand{\columnseprule}{0pt}
+\begin{multicols}{2}
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+    \ti[V.]
+    \ifnum\gabarito=1\doneitem[F.]\else\ti[F.]\fi % gabarito
+\end{answerlist}
+\end{multicols}
+}
+}
+
+
+
+{% Q2081
+
+\needspace{12\baselineskip} 
+\item \rtask \ponto{\pt} % 
+O método \lstinline[style=Python]|capitalize| da classe \textit{String} do Python é utilizado para: 
+
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+    \ti remover todos os espaços de uma \textit{string}.
+    
+    \ti verificar se todos os caracteres da \textit{string} são numéricos.
+    
+    \ti procurar uma substring em uma \textit{string} retornando seu índice caso seja encontrada.
+    
+    \di retornar uma cópia de uma \textit{string} somente com o primeiro caractere em maiúsculo.
+    
+    \ti retornar uma cópia de uma \textit{string} com todos os caracteres em minúsculo.
+\end{answerlist}
+
+    % A alternativa correta é a letra D, que afirma que o método capitalize da classe String do Python é utilizado para retornar uma cópia de uma string somente com o primeiro caractere em maiúsculo. Este método é bastante simples, mas muito útil em diversas situações onde se deseja garantir que uma string comece com uma letra maiúscula, como, por exemplo, no caso de nomes próprios ou início de sentenças.
+    % 
+    % Vamos entender melhor o que o método capitalize faz: ele converte o primeiro caractere de uma string para letra maiúscula (se for uma letra alfabética) e o restante dos caracteres para minúsculas, independentemente de como estavam anteriormente. Um exemplo de seu uso seria:
+    % 
+    % texto = "python é uma linguagem."
+    % texto_capitalizado = texto.capitalize()
+    % print(texto_capitalizado)  # Saída: "Python é uma linguagem."
+    % 
+    % Essa funcionalidade é exclusiva para o primeiro caractere da string. Se o primeiro caractere não for uma letra, a função não terá efeito sobre ele, mas ainda assim convertendo o restante dos caracteres para minúsculas. Por exemplo:
+    % 
+    % texto = "123abc"
+    % texto_capitalizado = texto.capitalize()
+    % print(texto_capitalizado)  # Saída: "123abc"
+    % 
+    % Com isso, fica claro por que as outras alternativas são incorretas:
+    % 
+    %     A fala sobre remover espaços, o que não é a função do capitalize, mas sim de métodos como strip, rstrip ou lstrip.
+    %     B menciona a verificação de caracteres numéricos, o que seria o propósito de métodos como isdigit ou isnumeric.
+    %     C trata da procura de substrings, que é feita com métodos como find ou index.
+    %     E descreve a conversão de todos os caracteres para minúsculas, o que seria feito pelo método lower.
+    % 
+    % Portanto, ao lembrar que o método capitalize altera somente o caso do primeiro caractere da string (para maiúscula) e o restante dos caracteres para minúsculas, é possível identificar facilmente a resposta correta para essa questão.
+}
+
+
+
+{% Q2295803[32C]
+
+\needspace{10\baselineskip} 
+\item \rtask \ponto{\pt} 
+Considere o seguinte dicionário (\textit{dictionary comprehension}) desenvolvido em Python 3.
+
+\lstinline[style=Python]|x = {i+1: i for i in range(16) if i % 3 == 1}|
+
+Assinale a alternativa que apresenta o resultado da execução do comando: \lstinline[style=Python]|sum(x)|.
+
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+    \ti \lstinline[style=Python]|51|.
+    \ti \lstinline[style=Python]|35|.
+    \di \lstinline[style=Python]|40|.
+    \ti \lstinline[style=Python]|57|.
+    \ti \lstinline[style=Python]|63|.
+\end{answerlist}
+}
+
+
+
+{% Q535634[24B]
+
+\needspace{21\baselineskip} 
+\item \rtask \ponto{\pt} 
+Considere o código fonte Python a seguir.
+
+\begin{lstlisting}[style=Python]
+def calcular(n):
+    resultado = []
+    a, b = 0, 1
+    while a < n:
+        ...I... 
+    return resultado
+res = calcular(100)
+print(res)
+\end{lstlisting}
+
+Para que seja exibido [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] a lacuna I precisa ser preenchida corretamente com:
+
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+\ti \begin{lstlisting}[style=Python,numbers=none]
+resultado.insert(a)
+a, b = b, a+b
+\end{lstlisting}
+
+\di \begin{lstlisting}[style=Python,numbers=none]
+resultado.append(a)
+a, b = b, a+b
+\end{lstlisting}
+
+\ti \begin{lstlisting}[style=Python,numbers=none]
+resultado.add(a)
+a, b = a, a+b
+\end{lstlisting}
+
+\ti \begin{lstlisting}[style=Python,numbers=none]
+resultado.append(a)
+a, b = a+b, b
+\end{lstlisting}
+
+\ti \begin{lstlisting}[style=Python,numbers=none]
+resultado.add(a)
+a, b = b, a+b
+\end{lstlisting}
+
+\end{answerlist}
+
+
+% Resposta Correta: B
+% 
+% A questão pede para completar o código de uma função em Python que deve gerar uma sequência de Fibonacci até um número n. A sequência de Fibonacci é uma série de números onde cada número é a soma dos dois precedentes, começando tipicamente com 0 e 1.
+% 
+% O código fornece a estrutura básica com um laço while que continua a executar enquanto a variável a for menor que n. Para que a função retorne a sequência de Fibonacci desejada, precisamos adicionar cada número atual da sequência (armazenado em a) a uma lista (chamada resultado) e depois atualizar as variáveis a e b para os próximos números da sequência.
+% 
+% A alternativa correta é a B, que utiliza o método append para adicionar o elemento atual a ao final da lista resultado. Em seguida, atualiza os valores de a e b de tal maneira que a recebe o valor de b e b recebe a soma de a e b (ou seja, o próximo número da sequência), o que é feito com a expressão a, b = b, a+b. Este é o processo que gera a sequência de Fibonacci.
+% 
+% Veja a alternativa correta formatada com as tags HTML:
+% resultado.append(a)
+% a, b = b, a+b
+% 
+% As outras alternativas estão incorretas por diversos motivos:
+% 
+%     A alternativa A usa um método que não existe para listas em Python (insert existe, mas requer dois argumentos).
+%     A alternativa C usa add, que é um método para conjuntos (set) e não listas, além de atualizar incorretamente as variáveis a e b.
+%     A alternativa D também usa append, mas atualiza as variáveis de forma invertida, o que não produziria a sequência de Fibonacci.
+%     A alternativa E repete o erro de usar o método add, que não é aplicável para listas.
+% 
+% Entender o funcionamento do método append e a lógica de atualização das variáveis na sequência de Fibonacci é essencial para resolver essa questão corretamente.
+}

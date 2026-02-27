@@ -1,0 +1,40 @@
+
+{% Q501334[D]
+\needspace{9\baselineskip} 
+\item \rtask \ponto{\pt} 
+nalise o trecho de programa Python, apresentado a seguir.
+
+\begin{lstlisting}[style=Python]
+L = [1, 2, 3, 4, 5, 6, 7, 8]
+print(L[::-1])
+\end{lstlisting}
+
+Ao ser executado, o resultado exibido é:
+
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+    \ti \lstinline[style=Python]|[1, 2, 3, 4, 5, 6, 7, 8]|.
+    \ti \lstinline[style=Python]|[8]|.
+    \ti \lstinline[style=Python]|[ ]|.
+    \di \lstinline[style=Python]|[8, 7, 6, 5, 4, 3, 2, 1]|.
+    \ti\lstinline[style=Python]|[1]|.
+\end{answerlist}
+
+
+% [8, 7, 6, 5, 4, 3, 2, 1]
+
+% Gabarito: Alternativa D - [8, 7, 6, 5, 4, 3, 2, 1]
+% 
+% Nesta questão, estamos explorando um conceito importante das listas em Python, que é o fatiamento (slicing). O fatiamento é usado para acessar elementos de uma lista de forma flexível, permitindo não apenas acessar um único elemento, mas também uma sequência de elementos de uma só vez.
+% 
+% Para entender a alternativa correta, vamos analisar a sintaxe do fatiamento utilizada: L[::-1]. Aqui temos três partes separadas por dois pontos (:):
+% 
+%     O primeiro espaço, que está vazio, indica o ponto de início do fatiamento. Quando deixamos vazio, o Python considera que queremos começar do primeiro elemento da lista.
+%     O segundo espaço também está vazio, o que indica o ponto de término do fatiamento. Quando vazio, o Python entende que queremos ir até o último elemento da lista.
+%     O terceiro espaço é preenchido com -1, que determina o passo do fatiamento. Um passo negativo faz com que a lista seja percorrida de trás para frente.
+% 
+% Portanto, o código L[::-1] pede para Python pegar a lista L desde o primeiro até o último elemento, mas percorrendo-a na ordem inversa. Isso resulta na lista original sendo completamente invertida.
+% 
+% Por isso, a alternativa D está correta, pois ao executar o fatiamento com passo -1, obtemos a lista [8, 7, 6, 5, 4, 3, 2, 1], que é a lista original invertida.
+% 
+% Conhecimentos como esse são essenciais para a programação em Python, e dominar o fatiamento de listas pode ser muito útil em várias situações, como manipulação de dados e desenvolvimento de algoritmos em concursos públicos e no dia-a-dia de um programador.
+}

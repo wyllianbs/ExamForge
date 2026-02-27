@@ -1,0 +1,49 @@
+
+{% Q3656730[D]
+
+\needspace{8\baselineskip} 
+\item \rtask \ponto{\pt} 
+Assinale a alternativa que apresenta corretamente a estrutura de dados na Linguagem Python que garante uma coleção de elementos únicos, ou seja, sem duplicatas.  
+
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+    \ti \texttt{tuple}
+    \ti \texttt{list}
+    \ti \texttt{stack}
+    \di \texttt{set}
+    \ti \texttt{dict}
+\end{answerlist}
+
+    % Tema central: Estruturas de dados em Python, com ênfase em coleções que garantem unicidade de elementos (não permitem duplicatas).
+    % 
+    % Análise conceitual: Em provas para Analista de Banco de Dados, é importante dominar as diferenças fundamentais entre as principais estruturas de dados. O enunciado destaca: "coleção de elementos únicos, sem duplicatas". Esta é a pista essencial!
+    % 
+    % Resumo das estruturas:
+    % 
+    %     Tuple: Sequência ordenada e imutável. Permite elementos repetidos.
+    %     List: Sequência ordenada e mutável. Aceita duplicatas.
+    %     Stack: Segue princípio LIFO (Last In, First Out), geralmente implementada com listas, permitindo duplicatas.
+    %     Set: Conjunto desordenado de elementos únicos. Não aceita duplicidade de elementos.
+    % 
+    % Justificativa da alternativa correta (D) Set:
+    % 
+    % O set foi desenvolvido especificamente para armazenar apenas elementos únicos. Se tentar inserir duplicatas, elas são ignoradas automaticamente.
+    % 
+    % Exemplo prático:
+    % meu_conjunto = {1, 2, 3, 3}
+    % 
+    % O comando acima resultará em {1, 2, 3}, pois os conjuntos eliminam as duplicatas.
+    % 
+    % Análise das alternativas incorretas:
+    % 
+    %     A) Tuple: Apesar de imutável, permite duplicatas. Ex: (1, 1, 2).
+    %     B) List: Permite e armazena vários elementos repetidos. Ex: [1, 2, 2, 3].
+    %     C) Stack: Não existe como estrutura nativa (usa lista). Permite duplicatas e não garante unicidade.
+    % 
+    % Estrategicamente, preste atenção a palavras-chave como "elementos únicos" nas questões: Tuple e List costumam aparecer para confundir, pois são bem conhecidas, mas não atendem ao critério principal. Stack pode ser uma armadilha por ser menos comum, mas não se aplica.
+    % 
+    % Segundo autores como Mark Lutz (Python Programming, O’Reilly), o set é a estrutura correta quando se deseja unicidade. Assim, a alternativa D (Set) é a única opção correta nesta questão.
+}
+
+
+
+

@@ -1,0 +1,37 @@
+{% Q2388375[94F]
+\needspace{4\baselineskip} 
+\item \rtask \ponto{\pt} 
+Em relação à Linguagem de Programação Python, julgue o item.
+
+A função \lstinline[style=Python]|range()|, em Python, é empregada, especificamente, para adicionar um item ao final de uma lista existente.
+
+% F
+{\setlength{\columnsep}{0pt}\renewcommand{\columnseprule}{0pt}
+\begin{multicols}{2}
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+    \ti[V.]
+    \ifnum\gabarito=1\doneitem[F.]\else\ti[F.]\fi % gabarito
+\end{answerlist}
+\end{multicols}
+}
+
+% Gabarito: E - Errado
+% 
+% A função range() em Python não tem o propósito de adicionar itens ao final de uma lista. Pelo contrário, seu uso principal é gerar sequências numéricas, não modificar estruturas de dados como listas. Mais especificamente, range() é frequentemente utilizada em laços de repetição, como for, para iterar sobre uma sequência de números.
+% 
+% Por exemplo:
+% 
+% <span style="color: blue;">for i in range(0, 5):
+%     print(i)
+% # Isso imprimirá os números de 0 a 4</span>
+% 
+% Se o objetivo é adicionar um item ao final de uma lista em Python, usamos o método append() da lista. Por exemplo:
+% 
+% <span style="color: blue;">minha_lista = [1, 2, 3]
+% minha_lista.append(4)
+% print(minha_lista)
+% # Isso resultará em [1, 2, 3, 4]</span>
+% 
+% Portanto, a afirmação da questão está incorreta, pois confunde a finalidade da função range() em Python, levando a uma interpretação equivocada de suas funcionalidades.
+}
+

@@ -1,0 +1,73 @@
+
+
+{% Q535634[24B]
+
+\needspace{21\baselineskip} 
+\item \rtask \ponto{\pt} 
+Considere o código fonte Python a seguir.
+
+\begin{lstlisting}[style=Python]
+def calcular(n):
+    resultado = []
+    a, b = 0, 1
+    while a < n:
+        ...I... 
+    return resultado
+res = calcular(100)
+print(res)
+\end{lstlisting}
+
+Para que seja exibido [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] a lacuna I precisa ser preenchida corretamente com:
+
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+\ti \begin{lstlisting}[style=Python,numbers=none]
+resultado.insert(a)
+a, b = b, a+b
+\end{lstlisting}
+
+\di \begin{lstlisting}[style=Python,numbers=none]
+resultado.append(a)
+a, b = b, a+b
+\end{lstlisting}
+
+\ti \begin{lstlisting}[style=Python,numbers=none]
+resultado.add(a)
+a, b = a, a+b
+\end{lstlisting}
+
+\ti \begin{lstlisting}[style=Python,numbers=none]
+resultado.append(a)
+a, b = a+b, b
+\end{lstlisting}
+
+\ti \begin{lstlisting}[style=Python,numbers=none]
+resultado.add(a)
+a, b = b, a+b
+\end{lstlisting}
+
+\end{answerlist}
+
+
+% Resposta Correta: B
+% 
+% A questão pede para completar o código de uma função em Python que deve gerar uma sequência de Fibonacci até um número n. A sequência de Fibonacci é uma série de números onde cada número é a soma dos dois precedentes, começando tipicamente com 0 e 1.
+% 
+% O código fornece a estrutura básica com um laço while que continua a executar enquanto a variável a for menor que n. Para que a função retorne a sequência de Fibonacci desejada, precisamos adicionar cada número atual da sequência (armazenado em a) a uma lista (chamada resultado) e depois atualizar as variáveis a e b para os próximos números da sequência.
+% 
+% A alternativa correta é a B, que utiliza o método append para adicionar o elemento atual a ao final da lista resultado. Em seguida, atualiza os valores de a e b de tal maneira que a recebe o valor de b e b recebe a soma de a e b (ou seja, o próximo número da sequência), o que é feito com a expressão a, b = b, a+b. Este é o processo que gera a sequência de Fibonacci.
+% 
+% Veja a alternativa correta formatada com as tags HTML:
+% resultado.append(a)
+% a, b = b, a+b
+% 
+% As outras alternativas estão incorretas por diversos motivos:
+% 
+%     A alternativa A usa um método que não existe para listas em Python (insert existe, mas requer dois argumentos).
+%     A alternativa C usa add, que é um método para conjuntos (set) e não listas, além de atualizar incorretamente as variáveis a e b.
+%     A alternativa D também usa append, mas atualiza as variáveis de forma invertida, o que não produziria a sequência de Fibonacci.
+%     A alternativa E repete o erro de usar o método add, que não é aplicável para listas.
+% 
+% Entender o funcionamento do método append e a lógica de atualização das variáveis na sequência de Fibonacci é essencial para resolver essa questão corretamente.
+}
+
+

@@ -1,0 +1,32 @@
+
+{ % Q3584924[F]
+\needspace{11\baselineskip}
+\item \rtask \ponto{\pt}
+Julgue o item subsequente, referente a Python.
+
+\begin{lstlisting}[style=Python]
+x = [10, 20, 30]
+y = x
+y += [60, 50, 40]
+print(x)
+print(y)
+\end{lstlisting}
+
+O código Python precedente, ao ser executado, apresentará o resultado a seguir.
+
+\begin{lstlisting}[style=Text]
+[10, 20, 30]
+[60, 60, 60]
+\end{lstlisting}
+
+
+% F
+{\setlength{\columnsep}{0pt}\renewcommand{\columnseprule}{0pt}
+\begin{multicols}{2}
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+    \ti[V.]
+    \ifnum\gabarito=1\doneitem[F.]\else\ti[F.]\fi % gabarito
+\end{answerlist}
+\end{multicols}
+}
+}

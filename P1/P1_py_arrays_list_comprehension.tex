@@ -1,0 +1,64 @@
+
+{% Q2801872
+\needspace{13\baselineskip} 
+\item \rtask \ponto{\pt} % 
+Considere o trecho de código em Python:
+
+\lstinline[style=Python]|q = [x ** 2 for x in range(5)]|
+
+Dada a sequência de código, assinale a alternativa CORRETA: 
+
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+    \ti A variável \lstinline[style=Python]|q| conterá uma lista com os números inteiros de \lstinline[style=Python]|0| a \lstinline[style=Python]|10|.
+    
+    \ti A variável \lstinline[style=Python]|q| conterá uma lista vazia.
+    
+    \di A variável \lstinline[style=Python]|q| conterá uma lista com os números \lstinline[style=Python]|0|, \lstinline[style=Python]|1|, \lstinline[style=Python]|4|, \lstinline[style=Python]|9| e \lstinline[style=Python]|16|.
+    
+    \ti A variável \lstinline[style=Python]|q| conterá uma lista com os números \lstinline[style=Python]|0|, \lstinline[style=Python]|2|, \lstinline[style=Python]|4|, \lstinline[style=Python]|6| e \lstinline[style=Python]|8|.
+    
+    \ti A variável \lstinline[style=Python]|q| conterá o valor \lstinline[style=Python]|None|.
+\end{answerlist}
+
+    % Alternativa correta: C - A variável q conterá uma lista com os números 0, 1, 4, 9 e 16.
+    % 
+    % Vamos entender o porquê desta alternativa ser a correta e analisar as demais opções.
+    % 
+    % A questão aborda a utilização de listas por compreensão em Python, uma ferramenta poderosa que permite criar listas de forma concisa e eficiente. O código fornecido é:
+    % 
+    % q = [x ** 2 for x in range(5)]
+    % 
+    % Para decifrar o que este código faz, precisamos entender dois conceitos principais:
+    % 
+    % 1. range(5): Esta função gera uma sequência de números inteiros de 0 a 4 (ou seja, cinco números: 0, 1, 2, 3, 4).
+    % 
+    % 2. x ** 2: Esta expressão eleva cada número gerado pelo range(5) ao quadrado.
+    % 
+    % Então, a lista por compreensão [x ** 2 for x in range(5)] cria uma lista onde cada elemento é o quadrado dos números de 0 a 4. Portanto, a lista q conterá os valores:
+    % 
+    %     0 ** 2 = 0
+    %     1 ** 2 = 1
+    %     2 ** 2 = 4
+    %     3 ** 2 = 9
+    %     4 ** 2 = 16
+    % 
+    % Isso confirma que a alternativa C é a correta.
+    % 
+    % Analisando as alternativas incorretas:
+    % 
+    % A - A variável q conterá uma lista com os números inteiros de 0 a 10.
+    % 
+    % Essa alternativa está incorreta porque o código não gera uma sequência de 0 a 10. Ele gera o quadrado dos números de 0 a 4.
+    % 
+    % B - A variável q conterá uma lista vazia.
+    % 
+    % Essa alternativa está incorreta porque a lista gerada pelo código não é vazia. O range(5) garante que haja cinco elementos na lista.
+    % 
+    % D - A variável q conterá uma lista com os números 0, 2, 4, 6 e 8.
+    % 
+    % Essa alternativa está incorreta porque o código eleva ao quadrado cada número de 0 a 4, e não apenas multiplica esses números por 2.
+    % 
+    % E - A variável q conterá o valor None.
+    % 
+    % Essa alternativa está incorreta porque a variável q será uma lista de valores inteiros, não um valor None.
+}

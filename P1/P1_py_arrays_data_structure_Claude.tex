@@ -1,0 +1,69 @@
+
+{% QClaudePyMisc137
+\needspace{17\baselineskip}
+\item \rtask \ponto{\pt}%
+Em Python~3, a função embutida \lstinline[style=Python]|tuple()|
+pode converter qualquer iterável em uma tupla. 
+
+Sobre a conversão
+de \lstinline[style=Python]|set| para \lstinline[style=Python]|tuple|,
+assinale a alternativa CORRETA:
+
+\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+    \ti A conversão preserva a ordem de inserção dos
+        elementos no conjunto original.
+
+    \di A conversão é possível e válida, porém a
+        {ordem dos elementos} na tupla resultante
+        pode não corresponder à ordem de inserção no
+        conjunto, pois \lstinline[style=Python]|set| é uma
+        coleção não ordenada.
+
+    \ti \lstinline[style=Python]|tuple(set)| levanta
+        \lstinline[style=Python]|TypeError| pois
+        \lstinline[style=Python]|set| não é iterável.
+
+    \ti A conversão sempre produz a tupla em ordem crescente
+        dos elementos.
+
+    \ti A conversão é impossível porque \lstinline[style=Python]|set|
+        pode conter elementos não \textit{hashable}.
+\end{answerlist}
+  % ----------------------------------------------------------------------
+  % ANÁLISE TÉCNICA
+  % ----------------------------------------------------------------------
+  %
+  % tuple(set_obj):
+  %   → Válido: set é iterável, então tuple() o percorre.
+  %   → A ordem na tupla resultante é a ordem de iteração do set.
+  %   → Set NÃO garante ordem; depende dos hashes e da implementação.
+  %   → A ordem pode variar entre execuções (PYTHONHASHSEED).
+  %
+  % Exemplo:
+  %   s = {3, 1, 2}
+  %   tuple(s) → pode ser (1, 2, 3) ou (3, 1, 2) ou outra ordem.
+  %
+  % Diferença importante:
+  %   tuple(sorted({3,1,2})) → (1,2,3) → ordem garantida (sorted).
+  %   tuple({3,1,2}) → ordem não garantida.
+  %
+  % Por que A está errada: set não preserva ordem de INSERÇÃO.
+  % Por que D está errada: tuple(set) não é necessariamente crescente.
+  %
+  % ----------------------------------------------------------------------
+  % Análise das alternativas:
+  % ----------------------------------------------------------------------
+  %
+  % A) Incorreta. set não preserva ordem de inserção.
+  % B) Correta.  Conversão válida; ordem não garantida (set é desordenado).
+  % C) Incorreta. set é iterável; tuple(set) é válido.
+  % D) Incorreta. A ordem não é necessariamente crescente.
+  % E) Incorreta. set armazena apenas elementos hashable; conversão é válida.
+  %
+  % ----------------------------------------------------------------------
+  % CONCLUSÃO
+  % ----------------------------------------------------------------------
+  %
+  % Alternativa correta: B
+  % ----------------------------------------------------------------------
+}
